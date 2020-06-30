@@ -10,6 +10,12 @@ export default class App extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleDownload = this.handleDownload.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleGetData = this.handleGetData.bind(this)
+  }
+
+  handleGetData() {
+
   }
 
   handleChange(event) {
@@ -48,6 +54,9 @@ export default class App extends Component {
     return (
       <div className='app'>
         <input onChange={this.handleChange} type="file" />
+        <button onClick={this.handleSubmit}>Send</button>
+        <hr/>
+        <button onClick={this.handleGetData}>Get File</button>
         <button onClick={this.handleDownload}>Download</button>
       </div>
     );
